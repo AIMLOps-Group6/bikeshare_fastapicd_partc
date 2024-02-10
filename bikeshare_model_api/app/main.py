@@ -23,16 +23,16 @@ root_router = APIRouter()
 @root_router.get("/")
 def index(request: Request) -> Any:
     """Basic HTML response."""
-    body = (
-        "<html>"
-        "<body style='padding: 10px;'>"
-        "<h1>Welcome to the API</h1>"
-        "<div>"
-        "Check the docs: <a href='/docs'>here</a>"
-        "</div>"
-        "</body>"
-        "</html>"
-    )
+    body = ("<html>" 
+            "<body style='padding: 10px;'>" 
+            "<h1 style='background-color:LightGray;'><center>Bikeshare Application</center></h1>" 
+            "<h2>Welcome to the API</h2>" 
+            "<div>" "Check the docs: <a href='/docs'>here</a>" 
+            "</div>" 
+             "</body>" 
+            "</html>"
+           )
+        
 
     return HTMLResponse(content=body)
 
